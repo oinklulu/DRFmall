@@ -1,37 +1,22 @@
+> psj商城
 
+**1.项目概述**
 
-- 创建项目
-    - 使用pycharm创建项目的时候一定不要勾选使用admin，本项目使用的是xadmin
-    - 在settings里面需要替换系统的用户```AUTH_USER_MODEL = 'users.UserProfile'```
-    - 使用的xadmin文件一定要复制我文件中的，原生的xadmin我做了修改
+Django Rest Framework搭建的前后端分离项目。
 
-- 创建应用
-    - 使用命令创建应用goods，trade，users，user_operation，
-    - 项目中我是把应用放在了apps这个包里面，所以在settings注册的时候一定要加上apps这个包名
+通过sentry完成错误日志的监控和告警。
 
+**2.项目特点**
 
-- 导入数据
-    - 一定不要忘记在settings里面先初始化路径
-    - 执行脚本文件进行导入数据，一定要先执行category文件，导入类别，再导入商品
-    - 导入的时候可能会报错
-    ```
-    django.core.exceptions.ImproperlyConfigured: Requested setting UEDITOR_SETTINGS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
-    ```
-    是因为导入的位置不对，```from apps.goods.models import GoodsCategory```导入的位置一定不能出错
+VUE前端+DRF实现前台api+Xadmin后台管理+错误日志监控+第三方登录。
 
+**3.项目运行环境**
 
-- 跨域问题
-    - 在settings里面设置csrf，配置好跨域
+python 3.5.2   
+Django 1.11.2(已升级Django 2.0.2)
 
+依赖 requirements.txt
 
+**4.备注**
 
-
-
-
-
-
-
-
-
-
-
+执行py脚本文件进行导入数据，先执行category文件，导入类别，再导入商品，否则会出错。
